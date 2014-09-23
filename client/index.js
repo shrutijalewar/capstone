@@ -6,7 +6,7 @@
     $routeProvider
     .when('/', {templateUrl:'/views/home/home.html', controller:'HomeCtrl'})
     .when('/register', {templateUrl:'/views/register/register.html', controller:'RegisterCtrl'})
-    .when('/login',    {templateUrl:'/views/login/login.html',       controller:'LoginCtrl'})
+    .when('/login', {templateUrl:'/views/register/register.html', controller:'RegisterCtrl'})
     .when('/logout',   {templateUrl:'/views/logout/logout.html',     controller:'LogoutCtrl'})
     .otherwise({redirectTo:'/'});
 
