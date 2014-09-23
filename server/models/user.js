@@ -32,5 +32,17 @@ User.login = function(o, cb){
   });
 };
 
+User.prototype.update = function(o, cb){
+  o.weightKG = (parseInt(o.weight)*0.45);
+  o.heightCM = (parseInt(o.ft)*12+parseInt(o.inches))*2.54;
+  if(o.gender !== 'male'){
+    o.calorieBase=(10*o.weightKG)+(6.25*o.heightCM)-(5*o.age)-161;
+    }else if(o.gender === 'male'){
+    o.calorieBase=(10*o.weightKG)+(6.25*o.heightCM)-(5*o.age)+5;
+    }
+  User.collection.save(this, function(){
+    cb(null, o);
+  });
+};
 module.exports = User;
 

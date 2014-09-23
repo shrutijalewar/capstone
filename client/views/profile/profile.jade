@@ -1,0 +1,35 @@
+h3 Profile
+.row
+  .col-xs-1
+  .col-xs-4
+    form.form(name='userForm', role='form', novalidate)
+      .row
+        .form-group
+          label(for='alias') Alias
+          input.form-control#alias(name='alias', type='text', ng-model='user.username', ng-minlength='3', required)
+        .form-group
+          label(for='gender') Gender
+          select.form-control#gender(name='gender', ng-model='user.gender', required)
+            option(value='male') Male
+            option(value='female') Female
+        .form-group
+          label(for='age') Age(y)
+          input.form-control#due(name='age', type='number', ng-model='user.age', required)
+        .form-group
+          label(for='weight') Weight(lb)
+          input.form-control#due(name='weight', type='number', ng-model='user.weight', required)
+          input.form-control#due(name='weightKG', type='hidden', value=0, ng-init='user.weightKG=1')
+      .row
+        .col-xs-4
+          .form-group
+            label(for='ft') Height(ft)
+            input.form-control#ft(name='ft', type='number', ng-model='user.ft', required)
+        .col-xs-4
+          .form-group
+            label(for='in') (in)
+            input.form-control#in(name='inches', type='number', ng-model='user.inches', required)
+            input.form-control#heightcm(name='heightCM', type='hidden', value=0, ng-init='user.heightCM=1')
+          .form-group
+      button.btn.btn-success.pull-right(ng-show='userForm.$valid', ng-click='updateProfile()') Update Profile
+  .col-xs-4
+

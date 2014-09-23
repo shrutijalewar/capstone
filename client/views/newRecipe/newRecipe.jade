@@ -1,0 +1,50 @@
+h3 Add Recipe
+.row
+  .col-xs-1
+  .col-xs-7
+    form.form(name='recipeForm', role='form', novalidate)
+      .row
+        .form-group
+          label(for='name') Name
+          input.form-control#name(name='name', type='text', ng-model='recipe.name', ng-minlength='3', required)
+        .form-group
+          label(for='course') Course
+          select.form-control#course(name='course', ng-model='recipe.course', required)
+            option(value='main') Main
+            option(value='side') Side
+            option(value='salad') Salad
+            option(value='soups') Soups
+            option(value='sauces') Sauces
+            option(value='onePotMeal') One Pot Meal
+            option(value='dessert') Dessert
+            option(value='Drinks') Drinks
+        .form-group
+          label(for='foodGroups') Main Nutritional Group
+          select.form-control#foodGroup(name='foodGroup', ng-model='recipe.foodGroup', required)
+            option(value='vegetables') Vegetables
+            option(value='meat') Meat
+            option(value='protein') Protein
+            option(value='carb') Carb
+            option(value='fat') Fat
+            option(value='fruit') Fruit
+
+        .form-group
+          label(for='prepTime') Prep Time (min)
+          input.form-control#time(name='prepTime', type='number', ng-model='profile.prepTime', required)
+        .form-group
+          label(for='weight') Weight(lb)
+          input.form-control#due(name='weight', type='number', ng-model='user.weight', required)
+          input.form-control#due(name='weightKG', type='hidden', value=0, ng-init='user.weightKG=1')
+      .row
+        .col-xs-4
+          .form-group
+            label(for='hr') Prep Time(Hr)
+            input.form-control#ft(name='hr', type='number', ng-model='recipe.hr', required)
+        .col-xs-4
+          .form-group
+            label(for='min') (min)
+            input.form-control#min(name='min', type='number', ng-model='recipe.min', required)
+          .form-group
+      button.btn.btn-success.pull-right(ng-show='userForm.$valid', ng-click='updateProfile()') Update Profile
+  .col-xs-4
+
