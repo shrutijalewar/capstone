@@ -12,7 +12,7 @@
     .when('/recipes', {templateUrl:'/views/recipes/recipes.html', controller:'RecipesCtrl'})
     .when('/links', {templateUrl:'/views/links/links.html', controller:'LinksCtrl'})
     .when('/logout',   {templateUrl:'/views/logout/logout.html',     controller:'LogoutCtrl'})
-    .otherwise({redirectTo:'/'});
+    .otherwise({redirectTo:'/register'});
 
     $httpProvider.interceptors.push('HttpInterceptor');
     $localForageProvider.config({name:'capstone', storeName:'cache', version:1.0});

@@ -1,4 +1,10 @@
-h3 Capstone
-  input(type='text', ng-model='name')
-  button(ng-click='getRecipe()') Search Recipe
-div(ss-recipe, ng-repeat='name in names', name='{{name}}')
+#home
+  .row
+    .col-xs-12
+      h3 Search
+  .row
+    .col-xs-12
+      #recipe
+        input#search(type='text', ng-model='name')
+        button.btn.btn-success(ng-click='getRecipe()') Search Recipe
+        div(ss-recipe, ng-repeat='name in names', name='{{name}}')

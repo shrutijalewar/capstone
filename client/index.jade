@@ -10,9 +10,11 @@ html(ng-app='capstone', lang='en')
     link(href='/vendor/toastr/toastr.css', rel='stylesheet')
     link(href='/index.css', rel='stylesheet')
     link(href='/views/recipes/recipes.css', rel='stylesheet')
+    link(href='/views/home/home.css', rel='stylesheet')
+    link(href='/components/directives/yummly/yummly.css', rel='stylesheet')
   body
     include nav
-    .container
+    .container-fluid
       .row
         .containerl-xs-12
           #container(ng-view)

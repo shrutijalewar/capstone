@@ -1,10 +1,12 @@
-h2 Recipe
-h3 {{title}}
-
+.row
+  .col-xs-12
+    h2 Recipe
+    h3 {{title}}
+    img(ng-src='{{recipe.photo}}')
+    #rec
      .ingredients Ingredients
         ul(ng-repeat='ingredient in recipe.ingredients')
           li: {{ingredient}}
       .direction
         {{recipe.directions}}
 
-      div(timepicker)

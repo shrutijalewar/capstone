@@ -1,4 +1,4 @@
-h3 Search
+h3 Results
 .row
   .col-xs-6
     #yumRs
@@ -6,6 +6,8 @@ h3 Search
         h3 {{yumR.recipeName}}
         img(ng-src='{{yumR.smallImageUrls[0]}}')
         h5 Course {{yumR.attributes.course[0]}}
-        button.btn.btn-primary(ng-click='getDirections(yumR.id)') Get Directions
-        button.btn.btn-danger(ng-click='saveLink(yumR.id)') Save Link
+        .col-xs-3
+          button#directions.btn.btn-primary(ng-click='getDirections(yumR.id)') Get Directions
+        .col-xs-3
+          button#save.btn.btn-warning(ng-click='saveLink(yumR.id)') Save Link
 
