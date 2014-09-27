@@ -3,13 +3,18 @@
 
   angular.module('capstone')
   .controller('HomeCtrl', ['$scope', '$interval', 'Home', function($scope, $interval, Home){
-    Home.getMessage().then(function(response){
-      $scope.mean = response.data.mean;
+    $scope.names = [];
 
-      $interval(function(){
-        $scope.mean = _.shuffle($scope.mean);
-      }, 500);
-    });
+    $scope.getRecipe = function(){
+      $scope.names.push($scope.name);
+      $scope.name = null;
+    };
+
+    $scope.getDirections = function(){
+      $scope.recipeIds.push($scope.recipeId);
+      $scope.recipeId = null;
+    };
+
   }]);
 })();
 

@@ -19,7 +19,7 @@ h3 Add Recipe
             option(value='dessert') Dessert
             option(value='Drinks') Drinks
         .form-group
-          label(for='foodGroups') Main Nutritional Group
+          label(for='foodGroup') Main Nutritional Group
           select.form-control#foodGroup(name='foodGroup', ng-model='recipe.foodGroup', required)
             option(value='vegetables') Vegetables
             option(value='meat') Meat
@@ -27,24 +27,32 @@ h3 Add Recipe
             option(value='carb') Carb
             option(value='fat') Fat
             option(value='fruit') Fruit
+        .form-group
+          label(for='cal') Calorie Content
+          input.form-control#cal(name='cal', type='number', ng-model='recipe.cal', required)
 
         .form-group
-          label(for='prepTime') Prep Time (min)
-          input.form-control#time(name='prepTime', type='number', ng-model='profile.prepTime', required)
+          label(for='serves') Serving Size
+          input.form-control#serves(name='serves', type='number', ng-model='recipe.serves', required)
         .form-group
-          label(for='weight') Weight(lb)
-          input.form-control#due(name='weight', type='number', ng-model='user.weight', required)
-          input.form-control#due(name='weightKG', type='hidden', value=0, ng-init='user.weightKG=1')
+          label(for='ingredients') Ingredients
+          input.form-control#ingredients(name='ingredients', type='text', ng-model='recipe.ingredients', required)
+        .form-group
+          label(for='directions') Directions
+          input.form-control#directions(name='directions', type='text-area', ng-model='recipe.directions', required)
+        .form-group
+          label(for='photo') Photo
+          input.form-control#photo(name='photo', type='url', ng-model='recipe.photo')
       .row
         .col-xs-4
           .form-group
             label(for='hr') Prep Time(Hr)
-            input.form-control#ft(name='hr', type='number', ng-model='recipe.hr', required)
+            input.form-control#hr(name='hr', type='number', ng-model='recipe.hr', required)
         .col-xs-4
           .form-group
             label(for='min') (min)
             input.form-control#min(name='min', type='number', ng-model='recipe.min', required)
           .form-group
-      button.btn.btn-success.pull-right(ng-show='userForm.$valid', ng-click='updateProfile()') Update Profile
+      button.btn.btn-success.pull-right(ng-show='recipeForm.$valid', ng-click='addRecipe()') Add Recipe
   .col-xs-4
 

@@ -3,14 +3,16 @@
 
 
   angular.module('capstone')
-  .controller('NewRecipeCtrl', ['$scope', '$location', 'User', function($scope, $location, User){
-    $scope.user = {};
+  .controller('NewRecipeCtrl', ['$scope', 'Recipe', function($scope, Recipe){
+    $scope.recipe = {};
+    $scope.recipes = [];
 
-$scope.updateProfile = function(){
-      User.update($scope.user).then(function(response){
-        //debugger;
+    $scope.addRecipe = function(){
+      Recipe.create($scope.recipe).then(function(response){
+        $scope.recipes.push(response.data.recipe);
+        $scope.recipe = {};
       });
     };
-  }]);
-})();
+  }]);//
+})();//
 

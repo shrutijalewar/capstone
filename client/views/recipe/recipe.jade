@@ -1,1 +1,10 @@
-h3 Recipe
+h2 Recipe
+h3 {{title}}
+
+     .ingredients Ingredients
+        ul(ng-repeat='ingredient in recipe.ingredients')
+          li: {{ingredient}}
+      .direction
+        {{recipe.directions}}
+
+      div(timepicker)

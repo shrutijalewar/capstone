@@ -3,14 +3,11 @@
 
 
   angular.module('capstone')
-  .controller('RecipesCtrl', ['$scope', '$location', 'User', function($scope, $location, User){
-    $scope.user = {};
-
-$scope.updateProfile = function(){
-      User.update($scope.user).then(function(response){
-        //debugger;
-      });
-    };
+  .controller('RecipesCtrl', ['$scope', 'Recipe', function($scope, Recipe){
+    $scope.priorities = [];
+    Recipe.all().then(function(response){
+      $scope.recipes = response.data.recipes;
+    });
   }]);
 })();
 

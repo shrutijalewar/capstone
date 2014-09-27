@@ -3,14 +3,13 @@
 
 
   angular.module('capstone')
-  .controller('RecipeCtrl', ['$scope', '$location', 'User', function($scope, $location, User){
-    $scope.user = {};
+  .controller('RecipeCtrl', ['$scope', '$routeParams', 'Recipe', function($scope, $routeParams, Recipe){
+    $scope.recipe = {};
+    Recipe.findById($routeParams.id).then(function(response){
+      $scope.recipe = response.data.recipe;
+      $scope.title = $scope.recipe.name;
 
-$scope.updateProfile = function(){
-      User.update($scope.user).then(function(response){
-        //debugger;
-      });
-    };
+    });
   }]);
 })();
 

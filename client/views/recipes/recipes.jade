@@ -2,3 +2,13 @@ h3 Recipes
 .row
   .col-xs-3
     li: a(href='/#/newRecipe') Add Recipe
+  .col-xs-9
+.row
+  #recipes
+    .recipes(ng-repeat='r in recipes')
+      h2: a(href='/#/recipe/{{r._id}}') {{r.name}}
+      img(ng-src='{{r.photo}}')
+      h5 Serving Size: {{r.serves}}
+      h5 Course: {{r.course}}
+      h5 Nutritional Group: {{r.foodGroup}}
+      h5 Preparation Time {{r.hr}}hr:{{r.min}}min
