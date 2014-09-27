@@ -9,7 +9,8 @@ var morgan         = require('morgan'),
     security       = require('../lib/security'),
     home           = require('../controllers/home'),
     users          = require('../controllers/users'),
-    recipes        = require('../controllers/recipes');
+    recipes        = require('../controllers/recipes'),
+    links        = require('../controllers/links');
 
 module.exports = function(app, express){
   app.use(morgan('dev'));
@@ -29,6 +30,8 @@ module.exports = function(app, express){
   app.use(security.bounce);
   app.get('/recipes', recipes.index);
   app.post('/recipes', recipes.create);
+  app.get('/links', links.index);
+  app.post('/links',links.create);
   app.get('/recipe/:recipeId', recipes.show);
   app.delete('/logout', users.logout);
 

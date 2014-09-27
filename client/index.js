@@ -10,6 +10,7 @@
     .when('/newRecipe', {templateUrl:'/views/newRecipe/newRecipe.html', controller:'NewRecipeCtrl'})
     .when('/recipe/:id', {templateUrl:'/views/recipe/recipe.html', controller:'RecipeCtrl'})
     .when('/recipes', {templateUrl:'/views/recipes/recipes.html', controller:'RecipesCtrl'})
+    .when('/links', {templateUrl:'/views/links/links.html', controller:'LinksCtrl'})
     .when('/logout',   {templateUrl:'/views/logout/logout.html',     controller:'LogoutCtrl'})
     .otherwise({redirectTo:'/'});
 

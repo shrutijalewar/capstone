@@ -10,10 +10,6 @@
       $scope.name = null;
     };
 
-    $scope.getDirections = function(){
-      $scope.recipeIds.push($scope.recipeId);
-      $scope.recipeId = null;
-    };
 
   }]);
 })();

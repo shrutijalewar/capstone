@@ -2,7 +2,7 @@
 
 var Mongo  = require('mongodb');
 
-function Recipe(o){
+function Recipe(o, user){
   strip(o);
   this._id = Mongo.ObjectID();
   this.name  = o.name;
@@ -17,19 +17,20 @@ function Recipe(o){
   this.min = o.min * 1;
   this.toBurn = o.cal * 1/ o.serves *1;
   this.created = new Date();
+  this.userId  = user._id;
 }
 
 Object.defineProperty(Recipe, 'collection', {
   get: function(){return global.mongodb.collection('recipes');}
 });
 
-Recipe.create = function(o, cb){
-  var r = new Recipe(o);
+Recipe.create = function(o, user, cb){
+  var r = new Recipe(o, user);
   Recipe.collection.save(r,cb);
 };
 
-Recipe.all = function(cb){
-  Recipe.collection.find().toArray(cb);
+Recipe.all = function(user, cb){
+  Recipe.collection.find({userId:user._id}).toArray(cb);
 };
 
 Recipe.findById = function(id, cb){

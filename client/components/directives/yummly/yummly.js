@@ -11,7 +11,7 @@
   }])
   .factory('DirectionsApi', ['$http', function($http){
     function directions(recipeId){
-      debugger;
+      //debugger;
       return $http.jsonp('http://api.yummly.com/v1/api/recipe/'+ recipeId +'?_app_id=21a22eae&_app_key=26b6066eff61fad6f1f5c16a8ae3134e&callback=JSON_CALLBACK');
     }
     return {directions:directions};
@@ -24,7 +24,7 @@
     o.link        = function(scope, element, attrs){
 
                     };
-    o.controller  = ['$scope', 'RecipeApi','DirectionsApi','$window', function($scope,RecipeApi, DirectionsApi, $window){
+    o.controller  = ['$scope', 'RecipeApi','DirectionsApi','$window', function($scope, RecipeApi, DirectionsApi, $window){
                     function getRecipe(){
                       RecipeApi.recipe($scope.name).then(function(response){
                         //debugger;
@@ -39,9 +39,14 @@
 
                   $scope.getDirections = function(recipeId){
                     DirectionsApi.directions(recipeId).then(function(response){
-                      //debugger;
-                      $scope.url = response.data.source.sourceRecipeUrl;
-                      $window.open($scope.url);
+                      var url = response.data.source.sourceRecipeUrl;
+                      $window.open(url);
+                    });
+                  };
+                  $scope.saveLink = function(recipeId){
+                    DirectionsApi.directions(recipeId).then(function(response){
+                      var url = response.data.source.sourceRecipeUrl;
+                      $window.open('/#/links?url='+ url);
                     });
                   };
 
