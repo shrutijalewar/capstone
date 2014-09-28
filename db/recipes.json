@@ -1,0 +1,40 @@
+{
+    "_id" : {"$oid":"b00000000000000000000001"},
+    "name" : "this",
+    "course" : "side",
+    "foodGroup" : "meat",
+    "serves" : 2,
+    "cal" : 400,
+    "photo" : "http://2.bp.blogspot.com/-4VHY9jyxKps/VCQsbR2S8uI/AAAAAAAACWA/lHvBMMsB5mY/s1600/food%2Bprep.jpg",
+    "ingredients" : [
+        "1 tsp this",
+        "1 tbsp that",
+        "1/2 cup other"
+    ],
+    "directions" : "cut cook clean and serve.",
+    "hr" : 2,
+    "min" : 10,
+    "toBurn" : 200,
+    "created" :{"$date":1410498000000},
+    "userId" : {"$oid":"000000000000000000000001"}
+}
+{
+    "_id" : {"$oid":"b00000000000000000000002"},
+    "name" : "that",
+    "course" : "main",
+    "foodGroup" : "meat",
+    "serves" : 2,
+    "cal" : 500,
+    "photo" : "http://2.bp.blogspot.com/-4VHY9jyxKps/VCQsbR2S8uI/AAAAAAAACWA/lHvBMMsB5mY/s1600/food%2Bprep.jpg",
+    "ingredients" : [
+        "1 tsp this",
+        "1 tbsp that",
+        "1/2 cup other"
+    ],
+    "directions" : "cut cook clean and serve.",
+    "hr" : 2,
+    "min" : 10,
+    "toBurn" : 250,
+    "created" :{"$date":1410498000000},
+    "userId" : {"$oid":"000000000000000000000002"}
+}

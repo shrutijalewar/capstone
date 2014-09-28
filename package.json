@@ -2,6 +2,24 @@
   "name": "capstone",
   "version": "0.0.0",
   "description": "The Capstone Project",
+  "main": "server/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "bin": {
+    "coveralls": "./node_modules/coveralls/bin/coveralls.js"
+  },
+  "scripts": {
+    "test": "mocha test --recursive -R spec",
+    "watch": "mocha test --recursive -R spec --watch",
+    "syntax": "./node_modules/grunt-cli/bin/grunt build",
+    "coveralls": "mocha test --recursive -r blanket -R mocha-lcov-reporter | coveralls"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "/server/"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/shrutijalewar/capstone"
