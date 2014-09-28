@@ -35,10 +35,3 @@ exports.logout = function(req, res){
   });
 };
 
-exports.updateProfile = function(req, res){
-  User.findById(req.user._id, function(err, user){
-  user.update(req.body, function(err, user){
-    res.send({user:user});
-    });
-  });
-};
