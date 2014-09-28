@@ -24,6 +24,15 @@
 .row
   .col-xs-1
   .col-xs-6
+    .form-group
+        label(for='sort') Sort
+        select.form-control(name='sort', ng-model='sort')
+          option(value='name') Name Ascending
+          option(value='-name') Name Descending
+          option(value='date') Date Ascending
+          option(value='-date') Date Descending
+          option(value='course') Course Ascending
+          option(value='-course') Course Descending
     table#links.table.table-bordered.table-hover.table-striped
       thead
         tr
@@ -31,10 +40,10 @@
           th Course
           th Date
       tbody
-        tr(ng-repeat='link in links')
+        tr(ng-repeat='link in links| orderBy:sort')
           td: a(ng-href='{{link.url}}') {{link.name}}
           td {{link.course}}
           td {{link.date | date}}
   .col-xs-2
   .col-xs-3
-    #clip(ng-src='/assets/chef1.png')
+    img#chef(ng-src='/assets/chef1.png')

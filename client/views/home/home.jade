@@ -2,7 +2,17 @@
   .row
     .col-xs-1
     .col-xs-10
-      h3 Search
+      #quote
+        article.quote(data-ng-init='init()')
+          h4 Quote of the Day:
+          h3 {{quote.body}}
+          p {{quote.author}}
+    .col-xs-1
+  .row
+    .col-xs-1
+    .col-xs-10
+      #search
+      h3 Explore Cooking Start Right here!
     .col-xs-1
   .row
     .col-xs-1
