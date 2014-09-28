@@ -1,27 +1,29 @@
-h3 Add Links
-    .row
-      .col-xs-5
-        form(role='form', novalidate, name='linkForm')
-          .form-group
-            input.form-control#name(type='text', name='name', ng-model='link.name', autofocus, required, placeholder='name')
-          .form-group
-            input.form-control#url(type='url', name='url', ng-model='link.url', required, placeholder='Url')
-          .form-group
-            select.form-control#course(name='course', type='text', ng-model='link.course', required)
-              option(value='main') Main
-              option(value='side') Side
-              option(value='salad') Salad
-              option(value='soups') Soups
-              option(value='sauces') Sauces
-              option(value='onePotMeal') One Pot Meal
-              option(value='dessert') Dessert
-              option(value='Drinks') Drinks
-              option(value='') Select Category
-          .form-group
-            button.btn.btn-primary(ng-show='linkForm.$valid', ng-click='addLink()') Add
-      .col-xs-7
 .row
-  .col-xs-7
+  .col-xs-1
+  .col-xs-5
+    h3 Add Links
+    form(role='form', novalidate, name='linkForm')
+      .form-group
+        input.form-control#name(type='text', name='name', ng-model='link.name', autofocus, required, placeholder='name')
+      .form-group
+        input.form-control#url(type='url', name='url', ng-model='link.url', required, placeholder='Url')
+      .form-group
+        select.form-control#course(name='course', type='text', ng-model='link.course', required)
+          option(value='main') Main
+          option(value='side') Side
+          option(value='salad') Salad
+          option(value='soups') Soups
+          option(value='sauces') Sauces
+          option(value='onePotMeal') One Pot Meal
+          option(value='dessert') Dessert
+          option(value='Drinks') Drinks
+          option(value='') Select Category
+      .form-group
+        button.btn.btn-primary(ng-show='linkForm.$valid', ng-click='addLink()') Add
+    .col-xs-6
+.row
+  .col-xs-1
+  .col-xs-6
     table#links.table.table-bordered.table-hover.table-striped
       thead
         tr
@@ -33,3 +35,6 @@ h3 Add Links
           td: a(ng-href='{{link.url}}') {{link.name}}
           td {{link.course}}
           td {{link.date | date}}
+  .col-xs-2
+  .col-xs-3
+    #clip(ng-src='/assets/chef1.png')

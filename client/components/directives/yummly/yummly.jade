@@ -1,13 +1,13 @@
 h3 Results
 .row
-  .col-xs-6
+  .col-xs-12
     #yumRs
       .yumR(ng-repeat= 'yumR in yumRecipes')
         h3 {{yumR.recipeName}}
         img(ng-src='{{yumR.smallImageUrls[0]}}')
         h5 Course {{yumR.attributes.course[0]}}
         .col-xs-3
-          button#directions.btn.btn-primary(ng-click='getDirections(yumR.id)') Get Directions
+          button#directions.btn.btn-primary.fa.fa-external-link-square(ng-click='getDirections(yumR.id)') &nbsp Get Directions
         .col-xs-3
-          button#save.btn.btn-warning(ng-click='saveLink(yumR.id)') Save Link
+          button#save.btn.btn-warning.fa.fa-floppy-o(ng-click='saveLink(yumR.id)') &nbsp Save Link
 

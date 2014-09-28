@@ -6,16 +6,16 @@
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href='/') Capstone
+      a.navbar-brand(href='/').fa.fa-leaf Capstone
 
     .collapse.navbar-collapse#bs-navbar-collapse
       ul.nav.navbar-nav.navbar-right(ng-hide='email')
-        li: a(href='/#/') Home
-        li: a(href='/#/register') Register/Login
+        li: a(href='/#/').fa.fa-home &nbsp Home
+        li: a(href='/#/register').fa.fa-pencil Register/Login
       ul.nav.navbar-nav.navbar-right(ng-show='email')
-        li: a(href='/#/') Home
-        li: a(href='/#/profile') Profile
-        li: a(href='/#/recipes') Recipes
-        li: a(href='/#/logout') Logout
-        li: a(href='/#/') {{email}}
+        li: a(href='/#/').fa.fa-home &nbsp Home
+        li: a(href='/#/links').fa.fa-link &nbsp Links
+        li: a(href='/#/recipes').fa.fa-cutlery. &nbsp Recipes
+        li: a(href='/#/logout').fa.fa-sign-out &nbsp Logout
+        li: a(href='/#/').fa.fa-user {{email}}
 

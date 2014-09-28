@@ -1,12 +1,18 @@
 .row
-  .col-xs-12
-    h2 Recipe
-    h3 {{title}}
+  .col-xs-1
+  .col-xs-4
+    h1 {{title}}
     img(ng-src='{{recipe.photo}}')
+    h4 Serves {{recipe.serves}}
+    h4 Preparation Time hr:{{recipe.hr}} min:{{recipe.min}}
+    h4 Course {{recipe.course}}
+  .col-xs-3
     #rec
-     .ingredients Ingredients
-        ul(ng-repeat='ingredient in recipe.ingredients')
-          li: {{ingredient}}
-      .direction
-        {{recipe.directions}}
-
+     .ingredients
+       h2 Ingredients
+       h4(ng-repeat='ingredient in recipe.ingredients')
+           {{ingredient}}
+  .col-xs-4
+    .directions
+      h2 Directions
+      {{recipe.directions}}

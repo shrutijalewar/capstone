@@ -1,10 +1,13 @@
 #home
   .row
-    .col-xs-12
+    .col-xs-1
+    .col-xs-10
       h3 Search
+    .col-xs-1
   .row
-    .col-xs-12
+    .col-xs-1
+    .col-xs-11
       #recipe
         input#search(type='text', ng-model='name')
-        button.btn.btn-success(ng-click='getRecipe()') Search Recipe
+        button#search.btn.btn-success.fa.fa-search(ng-click='getRecipe()') Search Recipe
         div(ss-recipe, ng-repeat='name in names', name='{{name}}')
