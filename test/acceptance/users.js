@@ -140,8 +140,9 @@ describe('users', function(){
     it('should log a user out', function(done){
       request(app)
       .delete('/logout')
+      .set('cookie', cookie)
       .end(function(err, res){
-        expect(res.status).to.equal(401);
+        expect(res.status).to.equal(200);
         done();
       });
     });
@@ -149,7 +150,7 @@ describe('users', function(){
   describe('confirm logout', function(){
     it('should confirm a user is logged out', function(done){
       request(app)
-      .get('/events/eee000000000000000000001')
+      .get('/links')
       .set('cookie')
       .end(function(req,res){
         expect(res.status).to.equal(401);
