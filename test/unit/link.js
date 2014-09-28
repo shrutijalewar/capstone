@@ -20,7 +20,7 @@ describe('Link', function(){
     });
   });
 
-  describe('.create', function(){
+  describe('constructor', function(){
     it('should create a new Link object', function(){
       var o = {
         name : 'saag',
