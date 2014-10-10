@@ -1,5 +1,7 @@
 ## name of project
 ### Code Badges
+[![Build Status](https://travis-ci.org/shrutijalewar/capstone.svg)](https://travis-ci.org/shrutijalewar/capstone)
+[![Coverage Status](https://coveralls.io/repos/shrutijalewar/capstone/badge.png)](https://coveralls.io/r/shrutijalewar/capstone)
 build status icon
 coverage status icon
 
