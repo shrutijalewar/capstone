@@ -6,34 +6,45 @@ build status icon
 coverage status icon
 
 ### Screenshots
-![Image1](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/one.jpg)
-![Image2](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/two.jpg)
+![Image1](https://raw.githubusercontent.com/shrutijalewar/capstone/master/docs/screenshots/Slide01.jpg)
+![Image2](https://raw.githubusercontent.com/shrutijalewar/capstone/master/docs/screenshots/Slide02.jpg)
+![Image3](https://raw.githubusercontent.com/shrutijalewar/capstone/master/docs/screenshots/Slide03.jpg)
+![Image4](https://raw.githubusercontent.com/shrutijalewar/capstone/master/docs/screenshots/Slide04.jpg)
+![Image5](https://raw.githubusercontent.com/shrutijalewar/capstone/master/docs/screenshots/Slide05.jpg)
 
 ### Description
 write a description about your project
 
 ### Models
 ```
-Model 1
+Recipe
 ```
+- .create
+- .findAllByUserId
+- .findById
 
 ```
-Model 2
+Link
 ```
+- .create
+- .allByUserId
 
 ### Database
 ```
-Collecion 1
+Recipes
 ```
 
 ```
-Collection 2
+Links
 ```
 
 ### Features
-- [x] Feature 1
-- [ ] Feature 2
-- [x] Feature 3
+- [x] Register
+- [x] Login
+- [x] Search for Recipes internally through Api
+- [X] Go to original sites
+- [x] Save urls for future reference
+- [x] Save Recipes for future reference
 
 ### Running Tests
 ```bash
@@ -42,7 +53,7 @@ $ npm test
 ```
 
 ### Contributors
-- [Chyld Medford](https://github.com/chyld)
+- [Shruti Sharma](https://github.com/shrutijalewar)
 
 ### License
 [MIT](LICENSE)
