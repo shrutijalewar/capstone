@@ -6,7 +6,7 @@
   .col-xs-1
 .row
   .col-xs-1
-  .col-xs-10
+  .col-xs-11
     #recipes
       .recipes(ng-repeat='r in recipes')
         h2: a(href='/#/recipe/{{r._id}}') {{r.name}}
@@ -15,4 +15,3 @@
         h3 Course: {{r.course}}
         h3 Nutritional Group: {{r.foodGroup}}
         h3 Preparation Time {{r.hr}}hr:{{r.min}}min
-   .col-xs-1

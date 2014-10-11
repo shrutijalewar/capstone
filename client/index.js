@@ -6,7 +6,6 @@
     $routeProvider
     .when('/', {templateUrl:'/views/home/home.html', controller:'HomeCtrl'})
     .when('/register', {templateUrl:'/views/register/register.html', controller:'RegisterCtrl'})
-    .when('/profile', {templateUrl:'/views/profile/profile.html', controller:'ProfileCtrl'})
     .when('/newRecipe', {templateUrl:'/views/newRecipe/newRecipe.html', controller:'NewRecipeCtrl'})
     .when('/recipe/:id', {templateUrl:'/views/recipe/recipe.html', controller:'RecipeCtrl'})
     .when('/recipes', {templateUrl:'/views/recipes/recipes.html', controller:'RecipesCtrl'})
