@@ -13,7 +13,7 @@ coverage status icon
 ![Image5](https://raw.githubusercontent.com/shrutijalewar/capstone/master/docs/screenshots/Slide05.jpg)
 
 ### Description
-write a description about your project
+Are you an apprentice or sous chef or the "Chef"?! The best of us need resources to record our recipes that we write or links that we want to save of other recipe blogs and sites. If you are a foodie or a cooking enthusiast then this is the thing for you. A one place where you can store all your culinary secrets and magic, accessible at your fingertips. 
 
 ### Models
 ```
